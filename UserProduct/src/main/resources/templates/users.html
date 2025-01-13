@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Users</title>
+</head>
+<body>
+<h1>Users</h1>
+<form action="" th:action="@{/users}" method="post">
+    <input type="text" name="name" placeholder="Enter user name" required/>
+    <button type="submit">Add User</button>
+</form>
+<ul>
+    <li th:each="user : ${users}">
+        <span th:text="${user.name}"></span>
+        <form th:action="@{/users/{id}(id=${user.id})}" method="post" style="display:inline;">
+            <input type="hidden" name="_method" value="delete"/>
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+</ul>
+</body>
+</html>
