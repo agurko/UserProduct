@@ -31,7 +31,7 @@ public class ProductController {
         return "redirect:/products"; // Перенаправление после создания
     }
 
-    @PostMapping("/{id}/delete")
+    @PostMapping("/{id}")
     public String deleteProduct(@PathVariable Long id) {
         productRepository.deleteById(id);
         return "redirect:/products"; // Перенаправление после удаления

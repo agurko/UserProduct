@@ -31,7 +31,7 @@ public class UserController {
         return "redirect:/users"; // Перенаправление после создания
     }
 
-    @PostMapping("/{id}/delete")
+    @PostMapping("/{id}")
     public String deleteUser (@PathVariable Long id) {
         userRepository.deleteById(id);
         return "redirect:/users"; // Перенаправление после удаления
