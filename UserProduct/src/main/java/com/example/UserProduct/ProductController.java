@@ -14,6 +14,9 @@ import java.util.List;
 public class ProductController {
 
     @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
     private ProductRepository productRepository;
 
     @GetMapping
