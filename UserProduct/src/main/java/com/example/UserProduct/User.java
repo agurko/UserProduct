@@ -2,6 +2,7 @@ package com.example.UserProduct;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.boot.autoconfigure.elasticsearch.ElasticsearchConnectionDetails;
 
 import java.util.Set;
 
@@ -26,6 +27,8 @@ public class User {
         this.name = name;
         this.products = products;
     }
+
+
 
     // Getters and Setters
 //    public Long getId() {   return id;    }

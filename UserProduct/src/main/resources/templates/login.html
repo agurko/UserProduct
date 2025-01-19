@@ -4,22 +4,17 @@
     <title>Login</title>
 </head>
 <body>
-<h1>Login</h1>
-<form action="#" th:action="@{/login}" method="post">
+<h1>Login Page</h1>
+<form action="/login" method="post">
     <div>
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username"/>
+        <input type="text" id="username" name="username" required>
     </div>
     <div>
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password"/>
+        <input type="password" id="password" name="password" required>
     </div>
-    <div>
-        <button type="submit">Login</button>
-    </div>
+    <button type="submit">Login</button>
 </form>
-<div th:if="${param.error}">
-    <p>Invalid username or password.</p>
-</div>
 </body>
 </html>
