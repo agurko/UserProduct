@@ -20,6 +20,9 @@ public class User {
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private Set<Product> products;
 
+    private String password;
+
+
     public User() { }
 
     public User(Long id, String name, Set<Product> products) {
@@ -28,9 +31,38 @@ public class User {
         this.products = products;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
-    // Getters and Setters
+    public Set<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(Set<Product> products) {
+        this.products = products;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+// Getters and Setters
 //    public Long getId() {   return id;    }
 //    public void setId(Long id) {   this.id = id;    }
 //    public String getName() {  return name;    }

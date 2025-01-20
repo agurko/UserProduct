@@ -24,6 +24,7 @@ public class DataInitializer implements CommandLineRunner {
         // Создание пользователя
         User user = new User();
         user.setName("John Doe");
+        user.setPassword("12345");
 
         // Создание продуктов
         Product product1 = new Product();
