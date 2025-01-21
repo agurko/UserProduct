@@ -20,7 +20,11 @@ public class HomeController {
     @GetMapping("/user")
     public String user(Model model) {
         model.addAttribute("message", "Welcome to the user page!");
-        return "user"; // Возвращает представление user.html
+        return "users"; // Возвращает представление user.html
+    }
+    @GetMapping("/logout")
+    public String logout() {
+        return "home"; // Возвращает представление login.html
     }
 }
 

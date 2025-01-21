@@ -23,7 +23,7 @@ public class DataInitializer implements CommandLineRunner {
     public void run(String... args) throws Exception {
         // Создание пользователя
         User user = new User();
-        user.setName("John Doe");
+        user.setName("user");
         user.setPassword("12345");
 
         // Создание продуктов
